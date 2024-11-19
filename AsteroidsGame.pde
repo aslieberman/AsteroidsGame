@@ -1,10 +1,14 @@
-//your variable declarations here
-public void setup() 
-{
-  //your code here
+void setup(){
+  size(900,900);
+  noStroke();
+  for(int i = 0; i < starbits.length; i++){
+    starbits[i] = new Star();}
+  Spaceship bob = new Spaceship();
 }
-public void draw() 
-{
-  //your code here
+void draw(){
+  background(0);
+  for(int i = 0; i < starbits.length; i++){
+    starbits[i].show();
+  }
+  bob.show();
 }
-
