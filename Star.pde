@@ -10,6 +10,7 @@ class Star{
     myColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   }
   public void show(){
+    noStroke();
     fill((int)myColor);
     ellipse((int)myX,(int)myY,(int)myWidth,(int)myHeight);
   }
