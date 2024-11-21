@@ -20,9 +20,9 @@ public void keyPressed() {
         if (keyCode == UP) {
             bob.accelerate(.1);
         } else if (keyCode == LEFT) {
-            bob.turn(-10);
+            bob.turn(-1);
         } else if (keyCode == RIGHT) {
-            bob.turn(10);
+            bob.turn(1);
         }
     }
 
