@@ -1,1 +1,3 @@
-
+class Asteroids extends Floater{
+    
+}
