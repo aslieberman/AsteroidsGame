@@ -43,17 +43,50 @@ class Spaceship extends Floater {
     public void setYspeed(double y) {
         myYspeed = y;
     }
+
     public void setCenterX(double x) {
         myCenterX = x;
     }
+
     public void setCenterY(double y) {
         myCenterY = y;
     }
+
     public void setDirection(double direction) {
         myPointDirection = direction;
     }
 
     public double getDirection() {
         return myPointDirection;
+    }
+
+    public double getCenterX() {
+        return myCenterX;
+    }
+
+    public double getCenterY() {
+        return myCenterY;
+    }
+}
+
+Spaceship bob = new Spaceship();
+
+public void keyPressed() {
+    if (key == CODED) {
+        if (keyCode == UP) {
+            bob.accelerate(0.05);
+        } else if (keyCode == LEFT) {
+            bob.turn(-2);
+        } else if (keyCode == RIGHT) {
+            bob.turn(2);
+        }
+    }
+
+    if (key == 'h') {
+        bob.setXspeed(0);
+        bob.setYspeed(0);
+        bob.setCenterX(Math.random()*900);
+        bob.setCenterY(Math.random()*900);
+        bob.setDirection(Math.random()*360);
     }
 }
