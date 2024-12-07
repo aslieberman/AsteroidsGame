@@ -1,4 +1,4 @@
-ArrayList<Asteroid> asteroids;
+ArrayList <Asteroid> asteroids;
 
 void setup(){
   size(900,900);
