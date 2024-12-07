@@ -1,36 +1,41 @@
-Spaceship bob = new Spaceship();
+ArrayList<Asteroid> asteroids;
+
 void setup(){
   size(900,900);
   noStroke();
   for(int i = 0; i < starbits.length; i++){
     starbits[i] = new Star();}
-
-}
-void draw(){
-  background(0);
-  for(int i = 0; i < starbits.length; i++){
-    starbits[i].show();
-  }
-  bob.move();
-  bob.show();
+  asteroids = new ArrayList<Asteroid>();
+  for (int i = 0; i < 10; i++) {
+    asteroids.add(new Asteroid());
 }
 
-public void keyPressed() {
-    if (key == CODED) {
-        if (keyCode == UP) {
-            bob.accelerate(.1);
-        } else if (keyCode == LEFT) {
-            bob.turn(-1);
-        } else if (keyCode == RIGHT) {
-            bob.turn(1);
+}
+
+void draw() {
+    background(0);
+    for (int i = 0; i < starbits.length; i++) {
+        starbits[i].show();
+    }
+    
+    bob.move();
+    bob.show();
+    
+    for (int i = asteroids.size() - 1; i >= 0; i--) {
+        Asteroid asteroid = asteroids.get(i);
+        
+        if (isCollision(bob, asteroid)) {
+            asteroids.remove(i);
+        } else {
+            asteroid.show();
+            asteroid.move();
         }
     }
+}
 
-    if (key == 'h') {
-        bob.setXspeed(0);
-        bob.setYspeed(0);
-        bob.setCenterX(Math.random()*900);
-        bob.setCenterY(Math.random()*900);
-        bob.setDirection(Math.random()*360);
-    }
+boolean isCollision(Spaceship ship, Asteroid asteroid) {
+    float distance = dist((float)ship.getCenterX(), (float)ship.getCenterY(), (float)asteroid.getCenterX(), (float)asteroid.getCenterY());
+    float collisionThreshold = 30;
+    
+    return distance < collisionThreshold;
 }
