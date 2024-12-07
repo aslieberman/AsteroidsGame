@@ -85,8 +85,8 @@ public void keyPressed() {
     if (key == 'h') {
         bob.setXspeed(0);
         bob.setYspeed(0);
-        bob.setCenterX(Math.random()*900);
-        bob.setCenterY(Math.random()*900);
-        bob.setDirection(Math.random()*360);
+        bob.setCenterX((int)(Math.random()*900));
+        bob.setCenterY((int)(Math.random()*900));
+        bob.setDirection((int)(Math.random()*360));
     }
 }
