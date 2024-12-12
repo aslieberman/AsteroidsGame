@@ -33,7 +33,7 @@ void draw() {
         fill(255,0,0);
         text("GAME OVER", 20, 450); 
     }
-    if(win){
+    else if(win){
         textSize(175);
         fill(0,255,0);
         text("YOU WIN", 125, 450);
