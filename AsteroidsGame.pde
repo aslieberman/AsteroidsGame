@@ -1,5 +1,5 @@
-ArrayList<Asteroid> asteroids;
-ArrayList<Bullet> bullets;
+ArrayList<Asteroid>asteroids;
+ArrayList<Bullet>bullets;
 Star[] starbits = new Star[500];
 Spaceship bob;
 boolean gameover = false;
