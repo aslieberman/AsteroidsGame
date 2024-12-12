@@ -15,4 +15,3 @@ class Star{
     ellipse((int)myX,(int)myY,(int)myWidth,(int)myHeight);
   }
 }
-Star [] starbits = new Star[300];
