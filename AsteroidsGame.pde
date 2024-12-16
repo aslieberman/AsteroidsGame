@@ -1,5 +1,5 @@
-ArrayList<Asteroid> asteroids;
-ArrayList<Bullet> bullets;
+ArrayList <Asteroid> asteroids;
+ArrayList <Bullet> bullets;
 Star[] starbits = new Star[500];
 Spaceship bob;
 boolean gameover = false;
@@ -10,14 +10,14 @@ void setup() {
     noStroke();
     
     bob = new Spaceship();
-    bullets = new ArrayList<>();
-    asteroids = new ArrayList<>();
+    bullets = new ArrayList <Bullet>();
+    asteroids = new ArrayList <Asteroid>();
     
     for(int i = 0; i < starbits.length; i++) {
         starbits[i] = new Star();
     }
     
-    for(int i = 0; i < 30; i++) { //edit amount of asteroids here
+    for(int i = 0; i < 0; i++) { //edit amount of asteroids here
         asteroids.add(new Asteroid());
     }
 }
