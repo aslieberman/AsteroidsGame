@@ -102,14 +102,14 @@ public void keyPressed() {
 }
 boolean collision(Spaceship ship, Asteroid asteroid) {
     float distance = dist((float) ship.getCenterX(), (float) ship.getCenterY(), (float) asteroid.getCenterX(), (float) asteroid.getCenterY());
-    float collisionThreshold = 30;
+    float collisionThreshold = 30.0f;
     
     return distance < collisionThreshold;
 }
 
 boolean collision(Bullet b, Asteroid asteroid) {
     float distance = dist((float) b.getCenterX(), (float) b.getCenterY(), (float) asteroid.getCenterX(), (float) asteroid.getCenterY());
-    float collisionThreshold = 15;
+    float collisionThreshold = 15.0f;
     
     return distance < collisionThreshold;
 }
