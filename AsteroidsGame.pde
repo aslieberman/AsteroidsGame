@@ -4,10 +4,8 @@ Star[] starbits = new Star[500];
 Spaceship bob;
 boolean gameover = false;
 boolean win = false;
-public void settings() {
-  size(900,900);
-}
 void setup() {
+    size(900,900);
     noStroke();
     
     bob = new Spaceship();
