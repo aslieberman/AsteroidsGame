@@ -34,5 +34,3 @@ class Bullet extends Floater {
         return myYspeed;
     }
 }
-
-
